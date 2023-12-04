@@ -15,7 +15,6 @@ const useForecast = () => {
     )
       .then((res) => res.json())
       .then((data) => setOptions(data));
-    console.log(import.meta.env.VITE_REACT_APP_API_KEY);
   };
 
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -23,7 +22,6 @@ const useForecast = () => {
     setTerm(value);
 
     if (value === "") return;
-
     getSearchOptions(value);
   };
 
